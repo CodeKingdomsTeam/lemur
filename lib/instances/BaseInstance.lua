@@ -82,6 +82,12 @@ BaseInstance.properties.Parent = InstanceProperty.normal({
 	end,
 })
 
+BaseInstance.properties.Archivable = InstanceProperty.typed("boolean", {
+	getDefault = function()
+		return true
+	end
+})
+
 BaseInstance.prototype = {}
 
 function BaseInstance.prototype:ClearAllChildren()

@@ -54,6 +54,20 @@ describe("instances.BaseInstance", function()
 		end)
 	end)
 
+	it("should have Archivable set to true by default", function()
+		local instance = BaseInstance:new()
+
+		assert.equal(instance.Archivable, true)
+	end)
+
+	it("should allow the change of Archivable", function()
+		local instance = BaseInstance:new()
+		instance.Archivable = false
+
+		assert.equal(instance.Archivable, false)
+	end)
+
+
 	describe("Parent", function()
 		it("should set to nil", function()
 			local parent = BaseInstance:new()
