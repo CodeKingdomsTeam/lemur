@@ -13,4 +13,10 @@ end
 
 Workspace.properties.CurrentCamera = InstanceProperty.normal({})
 
+Workspace.properties.Gravity = InstanceProperty.typed("float", {
+	getDefault = function()
+		return 196.2
+	end,
+})
+
 return Workspace
