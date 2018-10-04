@@ -26,6 +26,7 @@ local names = {
 	"ObjectValue",
 	"Player",
 	"Players",
+	"RemoteEvent",
 	"ReplicatedStorage",
 	"RunService",
 	"ScreenGui",
