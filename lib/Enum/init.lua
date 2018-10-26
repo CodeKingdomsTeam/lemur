@@ -8,6 +8,7 @@ local names = {
 	"EasingStyle",
 	"FillDirection",
 	"Font",
+	"FrameStyle",
 	"HorizontalAlignment",
 	"HttpContentType",
 	"Platform",

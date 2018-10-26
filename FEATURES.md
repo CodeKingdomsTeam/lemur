@@ -9,6 +9,7 @@ This document should remain up-to-date with current API coverage and status.
 - EasingDirection
 - EasingStyle
 - Font
+- FrameStyle
 - HorizontalAlignment
 - Platform
 - PlaybackState
