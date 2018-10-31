@@ -38,6 +38,7 @@ local names = {
 	"Stats",
 	"StringValue",
 	"TestService",
+	"TextBox",
 	"TextButton",
 	"TextLabel",
 	"TextService",
