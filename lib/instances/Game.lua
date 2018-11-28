@@ -17,6 +17,7 @@ local NotificationService = import("./NotificationService")
 local Players = import("./Players")
 local ReplicatedStorage = import("./ReplicatedStorage")
 local RunService = import("./RunService")
+local Selection = import("./Selection")
 local ServerScriptService = import("./ServerScriptService")
 local ServerStorage = import("./ServerStorage")
 local Stats = import("./Stats")
@@ -45,6 +46,7 @@ function Game:init(instance)
 	Players:new().Parent = instance
 	ReplicatedStorage:new().Parent = instance
 	RunService:new().Parent = instance
+	Selection:new().Parent = instance
 	ServerScriptService:new().Parent = instance
 	ServerStorage:new().Parent = instance
 	Stats:new().Parent = instance
