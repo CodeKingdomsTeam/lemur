@@ -26,6 +26,12 @@ ImageLabel.properties.ScaleType = InstanceProperty.enum(ScaleType, {
 	end,
 })
 
+ImageLabel.properties.Rotation = InstanceProperty.typed("number", {
+	getDefault = function()
+		return 0
+	end,
+})
+
 ImageLabel.properties.SliceCenter = InstanceProperty.typed("Rect", {
 	getDefault = function()
 		return Rect.new(0, 0, 1, 1)
