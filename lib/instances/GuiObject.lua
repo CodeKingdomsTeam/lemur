@@ -113,6 +113,7 @@ GuiObject.properties.Position = InstanceProperty.typed("UDim2", {
 	end,
 })
 
+
 GuiObject.properties.Size = InstanceProperty.typed("UDim2", {
 	getDefault = function()
 		return UDim2.new()
@@ -136,5 +137,8 @@ GuiObject.properties.ZIndex = InstanceProperty.typed("number", {
 		return 1
 	end,
 })
+
+GuiObject.prototype.TweenSizeAndPosition = function()
+end
 
 return GuiObject
