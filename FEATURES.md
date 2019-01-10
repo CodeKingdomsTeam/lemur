@@ -87,6 +87,7 @@ This document should remain up-to-date with current API coverage and status.
 	* InputEnded
 	* LayoutOrder
 	* Position
+	* Selectable
 	* Size
 	* SizeConstraint
 	* Visible
@@ -119,12 +120,15 @@ This document should remain up-to-date with current API coverage and status.
 	* GetFullName()
 	* GetPropertyChangedSignal(key)
 	* IsA(className)
+	* IsDescendantOf(object)
 	* WaitForChild(name)
 * LocalScript (stub)
 	* Source
 * Model (stub)
 * ModuleScript
 	* Source
+* ParticleEffect
+	* Enabled
 * Script (stub)
 	* Source
 * ScreenGui
@@ -172,6 +176,7 @@ This document should remain up-to-date with current API coverage and status.
 	* SystemLocaleId
 * LocalizationTable
 * Players
+	* GetPlayerFromCharacter (stub)
 	* LocalPlayer
 		* UserId
 * ReplicatedStorage
@@ -182,6 +187,9 @@ This document should remain up-to-date with current API coverage and status.
 	* IsStudio()
 * ServerScriptService
 * ServerStorage
+* StarterPlayer
+	* StarterCharacterScripts
+	* StarterPlayerScripts
 * Stats
 * TestService
 	* Error(message)

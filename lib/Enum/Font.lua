@@ -20,4 +20,8 @@ return createEnum("Font", {
 	SourceSansSemiBold = 16,
 	Count = 17,
 	Fallback = 17,
+	Gotham = 17,
+	GothamSemibold = 18,
+	GothamBold = 19,
+	GothamBlack = 20
 })

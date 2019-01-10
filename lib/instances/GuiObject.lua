@@ -113,6 +113,11 @@ GuiObject.properties.Position = InstanceProperty.typed("UDim2", {
 	end,
 })
 
+GuiObject.properties.Selectable = InstanceProperty.typed("boolean", {
+	getDefault = function()
+		return true
+	end,
+})
 
 GuiObject.properties.Size = InstanceProperty.typed("UDim2", {
 	getDefault = function()
