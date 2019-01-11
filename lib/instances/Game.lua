@@ -20,6 +20,7 @@ local RunService = import("./RunService")
 local Selection = import("./Selection")
 local ServerScriptService = import("./ServerScriptService")
 local ServerStorage = import("./ServerStorage")
+local StarterPlayer = import("./StarterPlayer")
 local Stats = import("./Stats")
 local TestService = import("./TestService")
 local TextService = import("./TextService")
@@ -49,6 +50,7 @@ function Game:init(instance)
 	Selection:new().Parent = instance
 	ServerScriptService:new().Parent = instance
 	ServerStorage:new().Parent = instance
+	StarterPlayer:new().Parent = instance
 	Stats:new().Parent = instance
 	TestService:new().Parent = instance
 	TextService:new().Parent = instance
