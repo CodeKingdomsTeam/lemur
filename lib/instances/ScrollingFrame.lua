@@ -4,6 +4,7 @@ local VerticalScrollBarPosition = import("../Enum/VerticalScrollBarPosition")
 local GuiObject = import("./GuiObject")
 local InstanceProperty = import("../InstanceProperty")
 local UDim2 = import("../types/UDim2")
+local Color3 = import("../types/Color3")
 local Vector2 = import("../types/Vector2")
 
 local ScrollingFrame = GuiObject:extend("ScrollingFrame", {
@@ -42,6 +43,12 @@ ScrollingFrame.properties.CanvasPosition = InstanceProperty.typed("Vector2", {
 ScrollingFrame.properties.CanvasSize = InstanceProperty.typed("UDim2", {
 	getDefault = function()
 		return UDim2.new()
+	end,
+})
+
+ScrollingFrame.properties.ScrollBarImageColor3 = InstanceProperty.typed("Color3", {
+	getDefault = function()
+		return Color3.new(255, 255, 255)
 	end,
 })
 

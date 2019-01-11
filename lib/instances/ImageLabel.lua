@@ -1,6 +1,7 @@
 local Color3 = import("../types/Color3")
 local GuiObject = import("./GuiObject")
 local InstanceProperty = import("../InstanceProperty")
+local UDim2 = import("../types/UDim2")
 local Rect = import("../types/Rect")
 local ScaleType = import("../Enum/ScaleType")
 
@@ -29,6 +30,12 @@ ImageLabel.properties.ScaleType = InstanceProperty.enum(ScaleType, {
 ImageLabel.properties.Rotation = InstanceProperty.typed("number", {
 	getDefault = function()
 		return 0
+	end,
+})
+
+ImageLabel.properties.TileSize = InstanceProperty.typed("UDim2", {
+	getDefault = function()
+		return UDim2.new(1, 0, 1, 0)
 	end,
 })
 
