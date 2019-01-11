@@ -48,7 +48,7 @@ ScrollingFrame.properties.CanvasSize = InstanceProperty.typed("UDim2", {
 
 ScrollingFrame.properties.ScrollBarImageColor3 = InstanceProperty.typed("Color3", {
 	getDefault = function()
-		return Color3.new()
+		return Color3.new(255, 255, 255)
 	end,
 })
 
