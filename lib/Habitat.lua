@@ -117,7 +117,8 @@ function Habitat:require(instance)
 		return internalInstance.moduleResult
 	end
 
-	local chunk = assert(loadstring(instance.Source, "@" .. internalInstance.modulePath))
+	local name = internalInstance.modulePath and ("@" .. internalInstance.modulePath) or instance.Name
+	local chunk = assert(loadstring(instance.Source, name))
 
 	local environment = assign({}, self.environment, { script = instance })
 	setfenv(chunk, environment)
