@@ -51,6 +51,12 @@ function Signal.new()
 	return self
 end
 
+function Signal:Clone()
+
+	-- TODO
+	return Signal.new()
+end
+
 function Signal:Connect(callback)
 	local internal = getmetatable(self).internal
 

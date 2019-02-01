@@ -241,6 +241,75 @@ function BaseInstance.prototype:IsDescendantOf(object)
 	return parent == object
 end
 
+function BaseInstance.prototype:Clone()
+
+	-- TODO: In lemur we should tag all services and use those rather than a filter on className
+	if 	self.ClassName == 'Game' or
+		self.ClassName == 'AnalyticsService' or
+		self.ClassName == 'ContentProvider' or
+		self.ClassName == 'CoreGui' or
+		self.ClassName == 'CorePackages' or
+		self.ClassName == 'ContextActionService' or
+		self.ClassName == 'GuiService' or
+		self.ClassName == 'HttpRbxApiService' or
+		self.ClassName == 'HttpService' or
+		self.ClassName == 'InsertService' or
+		self.ClassName == 'LocalizationService' or
+		self.ClassName == 'MarketplaceService' or
+		self.ClassName == 'NotificationService' or
+		self.ClassName == 'Players' or
+		self.ClassName == 'ReplicatedStorage' or
+		self.ClassName == 'RunService' or
+		self.ClassName == 'Selection' or
+		self.ClassName == 'ServerScriptService' or
+		self.ClassName == 'ServerStorage' or
+		self.ClassName == 'StarterPlayer' or
+		self.ClassName == 'Stats' or
+		self.ClassName == 'TestService' or
+		self.ClassName == 'TextService' or
+		self.ClassName == 'TweenService' or
+		self.ClassName == 'UserInputService' or
+		self.ClassName == 'VirtualInputManager' or
+		self.ClassName == 'Workspace'
+	then
+		error(string.format("%s cannot be cloned", self.ClassName), 2)
+	end
+
+	if not self.Archivable then
+		return nil
+	end
+
+	local oldChildren = self:GetChildren()
+
+	-- TODO: Need to store constructor parameters and create clone with them?
+	local clone = getmetatable(self).class:new()
+
+	-- Clone children
+	for i, child in pairs(oldChildren) do
+
+		local clonedChild = child:Clone()
+
+		clonedChild.Parent = clone
+	end
+
+	-- Clone Properties
+	local oldProperties = getmetatable(self).instance.properties
+	local newProperties = getmetatable(clone).instance.properties
+
+	for key, property in pairs(oldProperties) do
+
+		if key ~= "Parent" then
+
+			-- TODO: Need to clone properties themselves?
+			newProperties[key] = property
+		end
+	end
+
+	clone.Parent = nil
+
+	return clone
+end
+
 function BaseInstance.prototype:Destroy()
 	self:ClearAllChildren()
 
