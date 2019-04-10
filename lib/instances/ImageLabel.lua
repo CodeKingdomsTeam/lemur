@@ -2,6 +2,8 @@ local Color3 = import("../types/Color3")
 local GuiObject = import("./GuiObject")
 local InstanceProperty = import("../InstanceProperty")
 local Rect = import("../types/Rect")
+local Signal = import("../Signal")
+local UDim2 = import("../types/UDim2")
 local ScaleType = import("../Enum/ScaleType")
 
 local ImageLabel =
