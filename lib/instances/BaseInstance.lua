@@ -57,7 +57,7 @@ BaseInstance.properties.ChildAdded = InstanceProperty.readOnly({
 })
 
 BaseInstance.properties.ChildRemoved = InstanceProperty.readOnly({
-		getDefault = Signal.new
+	getDefault = Signal.new
 })
 
 BaseInstance.properties.Parent = InstanceProperty.normal({

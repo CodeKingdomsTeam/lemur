@@ -31,4 +31,10 @@ Workspace.properties.AllowThirdPartySales = InstanceProperty.typed("boolean", {
 	end
 })
 
+Workspace.properties.Gravity = InstanceProperty.typed("number", {
+	getDefault = function()
+		return 196.2
+	end
+})
+
 return Workspace

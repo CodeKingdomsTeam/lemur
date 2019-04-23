@@ -91,6 +91,10 @@ This document should remain up-to-date with current API coverage and status.
 	* Size
 	* SizeConstraint
 	* Visible
+* Humanoid
+	* Died
+	* Health
+	* MaxHealth
 * ImageButton
 	* Image
 	* ImageColor3
@@ -162,6 +166,10 @@ This document should remain up-to-date with current API coverage and status.
 	* VerticalAlignment
 * UIListLayout
 	* Padding
+* Workspace
+	* AllowThirdPartySales
+	* DistributedGameTime
+	* Gravity
 
 ## Implemented Services
 * ContentProvider
