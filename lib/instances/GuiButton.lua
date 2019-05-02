@@ -27,4 +27,16 @@ GuiButton.properties.MouseButton1Click = InstanceProperty.readOnly({
 	end,
 })
 
+GuiButton.properties.MouseEnter = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
+GuiButton.properties.MouseLeave = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
 return GuiButton
