@@ -89,6 +89,12 @@ GuiObject.properties.ClipsDescendants = InstanceProperty.typed("boolean", {
 	end,
 })
 
+GuiObject.properties.Activated = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
 GuiObject.properties.InputBegan = InstanceProperty.readOnly({
 	getDefault = function()
 		return Signal.new()
@@ -145,5 +151,18 @@ GuiObject.properties.ZIndex = InstanceProperty.typed("number", {
 
 GuiObject.prototype.TweenSizeAndPosition = function()
 end
+
+GuiObject.properties.MouseEnter = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
+GuiObject.properties.MouseLeave = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
 
 return GuiObject
