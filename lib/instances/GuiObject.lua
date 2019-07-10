@@ -137,6 +137,12 @@ GuiObject.properties.SizeConstraint = InstanceProperty.enum(SizeConstraint, {
 	end,
 })
 
+GuiObject.properties.Transparency = InstanceProperty.typed("number", {
+	getDefault = function()
+		return 0
+	end,
+})
+
 GuiObject.properties.Visible = InstanceProperty.typed("boolean", {
 	getDefault = function()
 		return true
