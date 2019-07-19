@@ -72,6 +72,10 @@ function Game.prototype:GetService(serviceName)
 	error(string.format("Cannot get service %q", tostring(serviceName)), 2)
 end
 
+function Game.prototype:SetPlaceId(placeId)
+	getmetatable(self).instance.properties.PlaceId = placeId
+end
+
 Game.properties.CreatorId = InstanceProperty.readOnly({
 	getDefault = function()
 		return 0
