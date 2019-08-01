@@ -97,4 +97,14 @@ ImageLabel.properties.InputBegan =
 	}
 )
 
+ImageLabel.properties.ImageTransparency =
+	InstanceProperty.typed(
+	"number",
+	{
+		getDefault = function()
+			return 0
+		end
+	}
+)
+
 return ImageLabel
