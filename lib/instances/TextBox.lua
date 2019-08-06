@@ -5,6 +5,7 @@ local InstanceProperty = import("../InstanceProperty")
 local TextTruncate = import("../Enum/TextTruncate")
 local TextXAlignment = import("../Enum/TextXAlignment")
 local TextYAlignment = import("../Enum/TextYAlignment")
+local Signal = import("../Signal")
 
 local TextBox = GuiObject:extend("TextBox", {
 	creatable = true,
@@ -85,6 +86,18 @@ TextBox.properties.TextXAlignment = InstanceProperty.enum(TextXAlignment, {
 TextBox.properties.TextYAlignment = InstanceProperty.enum(TextYAlignment, {
 	getDefault = function()
 		return TextYAlignment.Center
+	end,
+})
+
+TextBox.properties.Focused = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
+TextBox.properties.FocusLost = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
 	end,
 })
 
