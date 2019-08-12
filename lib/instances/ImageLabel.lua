@@ -35,6 +35,12 @@ ImageLabel.properties.ImageRectSize = InstanceProperty.typed("Vector2", {
 	end,
 })
 
+ImageLabel.properties.TileSize = InstanceProperty.typed("UDim2", {
+	getDefault = function()
+		return UDim2.new(1, 0, 1, 0)
+	end,
+})
+
 ImageLabel.properties.ScaleType = InstanceProperty.enum(ScaleType, {
 	getDefault = function()
 		return ScaleType.Stretch

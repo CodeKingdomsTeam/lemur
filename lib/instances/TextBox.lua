@@ -2,6 +2,7 @@ local Color3 = import("../types/Color3")
 local Font = import("../Enum/Font")
 local GuiObject = import("./GuiObject")
 local InstanceProperty = import("../InstanceProperty")
+local Signal = import("../Signal")
 local TextTruncate = import("../Enum/TextTruncate")
 local TextXAlignment = import("../Enum/TextXAlignment")
 local TextYAlignment = import("../Enum/TextYAlignment")
@@ -13,6 +14,18 @@ local TextBox = GuiObject:extend("TextBox", {
 TextBox.properties.ClearTextOnFocus = InstanceProperty.typed("boolean", {
 	getDefault = function()
 		return true
+	end,
+})
+
+TextBox.properties.FocusLost = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
+TextBox.properties.Focused = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
 	end,
 })
 
