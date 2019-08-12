@@ -63,7 +63,7 @@ This document should remain up-to-date with current API coverage and status.
 * Vector2
 	* Vector2.new()
 	* Vector2.new(x, y)
-	* Operators: `==`, `+`
+	* Operators: `==`, `+`, `*`, `/`
 
 ## Implemented Instance Members
 * AnalyticsService
@@ -86,6 +86,8 @@ This document should remain up-to-date with current API coverage and status.
 	* InputBegan
 	* InputEnded
 	* LayoutOrder
+	* MouseEnter
+	* MouseLeave
 	* Position
 	* Selectable
 	* Size
@@ -98,11 +100,15 @@ This document should remain up-to-date with current API coverage and status.
 * ImageButton
 	* Image
 	* ImageColor3
+	* ImageRectOffset
+	* ImageRectSize
 	* ScaleType
 	* SliceCenter
 * ImageLabel
 	* Image
 	* ImageColor3
+	* ImageRectOffset
+	* ImageRectSize
 	* ScaleType
 	* SliceCenter
 * Instance
