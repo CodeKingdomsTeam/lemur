@@ -44,6 +44,10 @@ function metatable:__eq(other)
 	return self.r == other.r and self.g == other.g and self.b == other.b
 end
 
+function metatable:__tostring()
+	return string.format("Color3(%f, %f, %f)", self.r, self.g, self.b)
+end
+
 function Color3.new(...)
 	if select("#", ...) == 0 then
 		return Color3.new(0, 0, 0)

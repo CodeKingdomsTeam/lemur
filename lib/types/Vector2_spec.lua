@@ -128,4 +128,8 @@ describe("types.Vector2", function()
 		assert.not_equals(vectorA, vectorB2)
 		assert.not_equals(vectorA, vectorB3)
 	end)
+
+	it("should have a string representation of a \"Vector2\" instance", function()
+		assert.equal(tostring(Vector2.new(1, 200)), "Vector2(1.000000, 200.000000)")
+	end)
 end)

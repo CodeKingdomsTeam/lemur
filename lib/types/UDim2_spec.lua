@@ -114,4 +114,8 @@ describe("types.UDim2", function()
 		assert.are.same({50, 150, 250, 350}, extractUDim2(udimA:Lerp(udimB, 0.5)))
 		assert.are.same({100, 200, 300, 400}, extractUDim2(udimA:Lerp(udimB, 1)))
 	end)
+
+	it("should have a string representation of a \"UDim2\" instance", function()
+		assert.equal(tostring(UDim2.new(0, 1, 0, 2)), "UDim2(UDim(0.000000, 1.000000), UDim(0.000000, 2.000000))")
+	end)
 end)

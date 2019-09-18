@@ -79,4 +79,8 @@ describe("types.Color3", function()
 		local type = typeof(Color3.new())
 		assert.are.equal("Color3", type)
 	end)
+
+	it("should have a string representation of a \"Color3\" instance", function()
+		assert.equal(tostring(Color3.new(0, 1, 0.5)), "Color3(0.000000, 1.000000, 0.500000)")
+	end)
 end)

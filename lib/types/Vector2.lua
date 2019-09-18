@@ -37,6 +37,11 @@ function metatable:__sub(other)
 	return Vector2.new(self.X - other.X, self.Y - other.Y)
 end
 
+function metatable:__tostring()
+	return string.format("Vector2(%f, %f)", self.X, self.Y)
+end
+
+
 function metatable:__mul(other)
 	if typeof(self) == "Vector2" and typeof(other) == "Vector2" then
 		return Vector2.new(self.X * other.X, self.Y * other.Y)

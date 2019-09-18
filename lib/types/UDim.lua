@@ -36,6 +36,10 @@ function metatable:__eq(other)
 	return self.Scale == other.Scale and self.Offset == other.Offset
 end
 
+function metatable:__tostring()
+	return string.format("UDim(%f, %f)", self.Scale, self.Offset)
+end
+
 function UDim.new(...)
 	if select("#", ...) == 0 then
 		return UDim.new(0, 0)

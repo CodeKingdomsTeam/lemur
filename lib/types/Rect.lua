@@ -34,6 +34,10 @@ function metatable:__eq(other)
 	return self.Min == other.Min and self.Max == other.Max
 end
 
+function metatable:__tostring()
+	return string.format("Rect(%s, %s)", self.Min, self.Max)
+end
+
 function Rect.new(...)
 	if select("#", ...) == 4 then
 		local minX, minY, maxX, maxY = ...

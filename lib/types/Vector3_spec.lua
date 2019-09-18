@@ -141,4 +141,8 @@ describe("types.Vector3", function()
 	it("should have a string representation of \"Vector3\"", function()
 		assert.equal(tostring(Vector3), "Vector3")
 	end)
+
+	it("should have a string representation of a \"Vector3\" instance", function()
+		assert.equal(tostring(Vector3.new(1, 200, 500)), "Vector3(1.000000, 200.000000, 500.000000)")
+	end)
 end)

@@ -65,6 +65,10 @@ function metatable:__eq(other)
 	return self.X == other.X and self.Y == other.Y and self.Z == other.Z
 end
 
+function metatable:__tostring()
+	return string.format("Vector3(%f, %f, %f)", self.X, self.Y, self.Z)
+end
+
 function Vector3.new(...)
 	if select("#", ...) == 0 then
 		return Vector3.new(0, 0, 0)

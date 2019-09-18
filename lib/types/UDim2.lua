@@ -51,6 +51,10 @@ function metatable:__add(other)
 	return UDim2.new(self.X + other.X, self.Y + other.Y)
 end
 
+function metatable:__tostring()
+	return string.format("UDim2(%s, %s)", tostring(self.X), tostring(self.Y))
+end
+
 function UDim2.new(...)
 	if select("#", ...) == 0 then
 		return UDim2.new(

@@ -81,4 +81,8 @@ describe("types.Rect", function()
 		assert.not_equals(rectA, rectB3)
 		assert.not_equals(rectA, rectB4)
 	end)
+
+	it("should have a string representation of a \"Rect\" instance", function()
+		assert.equal(tostring(Rect.new(0, 1, 0, 2)), "Rect(Vector2(0.000000, 1.000000), Vector2(0.000000, 2.000000))")
+	end)
 end)

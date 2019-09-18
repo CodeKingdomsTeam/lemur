@@ -56,4 +56,8 @@ describe("types.UDim", function()
 		assert.not_equals(udimA, udimB2)
 		assert.not_equals(udimA, udimB3)
 	end)
+
+	it("should have a string representation of a \"UDim\" instance", function()
+		assert.equal(tostring(UDim.new(0, 1)), "UDim(0.000000, 1.000000)")
+	end)
 end)
