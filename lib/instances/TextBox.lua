@@ -6,6 +6,7 @@ local Signal = import("../Signal")
 local TextTruncate = import("../Enum/TextTruncate")
 local TextXAlignment = import("../Enum/TextXAlignment")
 local TextYAlignment = import("../Enum/TextYAlignment")
+local Signal = import("../Signal")
 
 local TextBox =
 	GuiObject:extend(
@@ -172,5 +173,17 @@ TextBox.properties.TextEditable =
 		end
 	}
 )
+
+TextBox.properties.Focused = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
+
+TextBox.properties.FocusLost = InstanceProperty.readOnly({
+	getDefault = function()
+		return Signal.new()
+	end,
+})
 
 return TextBox
