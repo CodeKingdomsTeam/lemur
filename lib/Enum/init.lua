@@ -13,6 +13,7 @@ local names = {
 	"HttpContentType",
 	"Platform",
 	"InfoType",
+	"InitialDockState",
 	"KeyCode",
 	"MouseBehavior",
 	"PlaybackState",
