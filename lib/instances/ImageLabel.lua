@@ -53,6 +53,14 @@ ImageLabel.properties.SliceCenter = InstanceProperty.typed("Rect", {
 	end,
 })
 
+ImageLabel.properties.SliceScale = InstanceProperty.typed("number",
+	{
+		getDefault = function()
+			return 1
+		end
+	}
+)
+
 ImageLabel.properties.MouseEnter =
 	InstanceProperty.readOnly(
 	{
