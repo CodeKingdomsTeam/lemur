@@ -35,7 +35,7 @@ function metatable:__eq(other)
 end
 
 function metatable:__tostring()
-	return string.format("Rect(%s, %s)", self.Min, self.Max)
+	return string.format("Rect(%s, %s)", tostring(self.Min), tostring(self.Max))
 end
 
 function Rect.new(...)
