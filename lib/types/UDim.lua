@@ -32,6 +32,10 @@ function metatable:__add(other)
 	return UDim.new(self.Scale + other.Scale, self.Offset + other.Offset)
 end
 
+function metatable:__sub(other)
+	return UDim.new(self.Scale - other.Scale, self.Offset - other.Offset)
+end
+
 function metatable:__eq(other)
 	return self.Scale == other.Scale and self.Offset == other.Offset
 end
