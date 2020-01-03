@@ -26,6 +26,16 @@ TextBox.properties.ClearTextOnFocus =
 	}
 )
 
+TextBox.properties.CursorPosition =
+	InstanceProperty.typed(
+	"number",
+	{
+		getDefault = function()
+			return -1
+		end
+	}
+)
+
 TextBox.properties.FocusLost =
 	InstanceProperty.readOnly(
 	{
@@ -54,12 +64,32 @@ TextBox.properties.Font =
 	}
 )
 
+TextBox.properties.PlaceholderColor3 =
+	InstanceProperty.typed(
+	"Color3",
+	{
+		getDefault = function()
+			return Color3.new()
+		end
+	}
+)
+
 TextBox.properties.PlaceholderText =
 	InstanceProperty.typed(
 	"string",
 	{
 		getDefault = function()
 			return ""
+		end
+	}
+)
+
+TextBox.properties.SelectionStart =
+	InstanceProperty.typed(
+	"number",
+	{
+		getDefault = function()
+			return -1
 		end
 	}
 )
