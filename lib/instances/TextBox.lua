@@ -26,6 +26,16 @@ TextBox.properties.ClearTextOnFocus =
 	}
 )
 
+TextBox.properties.CursorPosition =
+	InstanceProperty.typed(
+	"number",
+	{
+		getDefault = function()
+			return -1
+		end
+	}
+)
+
 TextBox.properties.FocusLost =
 	InstanceProperty.readOnly(
 	{
@@ -54,12 +64,36 @@ TextBox.properties.Font =
 	}
 )
 
+TextBox.prototype.IsFocused = function()
+	return false
+end
+
+TextBox.properties.PlaceholderColor3 =
+	InstanceProperty.typed(
+	"Color3",
+	{
+		getDefault = function()
+			return Color3.new()
+		end
+	}
+)
+
 TextBox.properties.PlaceholderText =
 	InstanceProperty.typed(
 	"string",
 	{
 		getDefault = function()
 			return ""
+		end
+	}
+)
+
+TextBox.properties.SelectionStart =
+	InstanceProperty.typed(
+	"number",
+	{
+		getDefault = function()
+			return -1
 		end
 	}
 )
@@ -174,16 +208,22 @@ TextBox.properties.TextEditable =
 	}
 )
 
-TextBox.properties.Focused = InstanceProperty.readOnly({
-	getDefault = function()
-		return Signal.new()
-	end,
-})
+TextBox.properties.Focused =
+	InstanceProperty.readOnly(
+	{
+		getDefault = function()
+			return Signal.new()
+		end
+	}
+)
 
-TextBox.properties.FocusLost = InstanceProperty.readOnly({
-	getDefault = function()
-		return Signal.new()
-	end,
-})
+TextBox.properties.FocusLost =
+	InstanceProperty.readOnly(
+	{
+		getDefault = function()
+			return Signal.new()
+		end
+	}
+)
 
 return TextBox
