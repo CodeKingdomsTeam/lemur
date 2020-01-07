@@ -64,6 +64,10 @@ TextBox.properties.Font =
 	}
 )
 
+TextBox.prototype.IsFocused = function()
+	return false
+end
+
 TextBox.properties.PlaceholderColor3 =
 	InstanceProperty.typed(
 	"Color3",
@@ -204,16 +208,22 @@ TextBox.properties.TextEditable =
 	}
 )
 
-TextBox.properties.Focused = InstanceProperty.readOnly({
-	getDefault = function()
-		return Signal.new()
-	end,
-})
+TextBox.properties.Focused =
+	InstanceProperty.readOnly(
+	{
+		getDefault = function()
+			return Signal.new()
+		end
+	}
+)
 
-TextBox.properties.FocusLost = InstanceProperty.readOnly({
-	getDefault = function()
-		return Signal.new()
-	end,
-})
+TextBox.properties.FocusLost =
+	InstanceProperty.readOnly(
+	{
+		getDefault = function()
+			return Signal.new()
+		end
+	}
+)
 
 return TextBox
